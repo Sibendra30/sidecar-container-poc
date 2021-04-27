@@ -1,0 +1,35 @@
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: sidecar-poc
+  labels:        
+    app: sidecar-poc
+spec:                
+  selector:         
+    matchLabels:
+      app: sidecar-poc
+  replicas: 1        
+  template:
+    metadata:
+      labels:        
+        app: sidecar-poc
+    spec:
+      containers:
+        - name: primary-app
+          image: sibendra30/token-consumer-app:1.0
+          ports:
+            - containerPort: 8092
+          volumeMounts:
+            - mountPath: /shared-tmp
+              name: demo-volume
+
+        - name: sidecar-app
+          image: sibendra30/token-producer-app:1.1
+          ports:
+            - containerPort: 8091
+          volumeMounts:
+            - mountPath: /shared-tmp
+              name: demo-volume
+      volumes:
+        - name: demo-volume
+          emptyDir: {medium: "Memory"}
