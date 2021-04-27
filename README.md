@@ -1,4 +1,4 @@
-# sidecar-container-poc
+# sidecar-container-poc  #k8-Design Pattern (Sidecar or Sidekick design pattern)
 Here we are creating a separate container (responsible for getting the token and refresh at certain intervals) any independent task which is can be handled independently and deploy alongside the main container. Whereas main container can always refer to sidecar container for auth token.
 
 
