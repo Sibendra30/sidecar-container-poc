@@ -14,20 +14,12 @@ import java.util.concurrent.TimeUnit;
 public class TokenconsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TokenconsumerApplication.class, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(TokenconsumerApplication.class, args);
 		
 		ScheduledExecutorService scheduled =
 				Executors.newSingleThreadScheduledExecutor();
 		scheduled.schedule(() -> {
-			ConfigurableApplicationContext ctx = new SpringApplicationBuilder(SpringApplication.class)
-					.web(WebApplicationType.NONE).run();
-
-			int exitCode = SpringApplication.exit(ctx, () -> {
-				// return the error code
-				return 0;
-			});
-			System.exit(exitCode);
-		}, 180, TimeUnit.SECONDS);
+			ctx.close();
+		}, 120, TimeUnit.SECONDS);
 	}
-
 }

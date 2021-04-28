@@ -17,9 +17,10 @@ import java.nio.file.StandardOpenOption;
 @EnableScheduling
 public class TokenSchedulerConfig {
 
-    public TokenSchedulerConfig(@Value("${tokenfile.path}") String filename) {
+    public TokenSchedulerConfig(@Value("${tokenfile.path}") String filename) throws InterruptedException {
         this.path = Paths.get(filename);
         System.out.println("Initializing token on start-up" + filename);
+        Thread.sleep(60000l);
         this.generateAndWriteToken(true);
     }
 

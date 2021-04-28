@@ -1,3 +1,5 @@
-/home/sri/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/controller/TokenController.java
-/home/sri/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/TokenproducerApplication.java
-/home/sri/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/config/TokenWatchConfiguration.java
+/home/sri/sidecar-container-poc/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/TokenproducerApplication.java
+/home/sri/sidecar-container-poc/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/controller/TokenController.java
+/home/sri/sidecar-container-poc/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/config/TokenWatchConfiguration.java
+/home/sri/sidecar-container-poc/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/config/CustomHealthIndicator.java
+/home/sri/sidecar-container-poc/sidecar_poc/producer-app/src/main/java/com/wp/tokenproducer/config/ReadinessEndpoint.java

@@ -1,2 +1,2 @@
-/home/sri/sidecar_poc/consumer-app/src/main/java/com/wp/tokenconsumer/config/TokenSchedulerConfig.java
-/home/sri/sidecar_poc/consumer-app/src/main/java/com/wp/tokenconsumer/TokenconsumerApplication.java
+/home/sri/sidecar-container-poc/sidecar_poc/consumer-app/src/main/java/com/wp/tokenconsumer/TokenconsumerApplication.java
+/home/sri/sidecar-container-poc/sidecar_poc/consumer-app/src/main/java/com/wp/tokenconsumer/config/TokenSchedulerConfig.java

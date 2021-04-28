@@ -14,11 +14,11 @@ public class CustomHealthIndicator implements HealthIndicator {
     private boolean isHealthy = true;
 
     public CustomHealthIndicator() {
-        ScheduledExecutorService scheduled =
+        /*ScheduledExecutorService scheduled =
           Executors.newSingleThreadScheduledExecutor();
         scheduled.schedule(() -> {
             isHealthy = false;
-        }, 120, TimeUnit.SECONDS);
+        }, 120, TimeUnit.SECONDS);*/
     }
 
     @Override

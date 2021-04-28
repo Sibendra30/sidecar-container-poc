@@ -6,6 +6,9 @@ import org.springframework.context.annotation.Configuration;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 @Configuration
@@ -22,6 +25,7 @@ public class TokenWatchConfiguration {
         }
         tokenBytes = Files.readAllLines(path).get(0).getBytes();
         Executors.newSingleThreadExecutor().execute(() -> watchTokenStore(dir));
+
     }
 
     public void watchTokenStore(String dir) {
