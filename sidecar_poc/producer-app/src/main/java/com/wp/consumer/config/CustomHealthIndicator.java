@@ -1,7 +1,8 @@
-package com.wp.tokenproducer.config;
+package com.wp.consumer.config;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Executors;
@@ -9,6 +10,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Component
+// @Profile("consumer")
 public class CustomHealthIndicator implements HealthIndicator {
 
     private boolean isHealthy = true;

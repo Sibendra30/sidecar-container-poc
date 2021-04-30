@@ -1,9 +1,9 @@
-package com.wp.tokenproducer.config;
+package com.wp.consumer.config;
 
-import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 import org.springframework.boot.availability.AvailabilityChangeEvent;
 import org.springframework.boot.availability.ReadinessState;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.Executors;
@@ -11,6 +11,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Component
+// @Profile("consumer")
 public class ReadinessEndpoint {
 
     private final TokenWatchConfiguration tokenWatchConfiguration;

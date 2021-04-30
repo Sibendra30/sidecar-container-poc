@@ -1,6 +1,7 @@
-package com.wp.tokenproducer.controller;
+package com.wp.consumer.controller;
 
-import com.wp.tokenproducer.config.TokenWatchConfiguration;
+import com.wp.consumer.config.TokenWatchConfiguration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

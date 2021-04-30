@@ -1,7 +1,8 @@
-package com.wp.tokenproducer.config;
+package com.wp.consumer.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 
 @Configuration
+// @Profile("consumer")
 public class TokenWatchConfiguration {
     private byte [] tokenBytes;
     public String getAuthToken() {

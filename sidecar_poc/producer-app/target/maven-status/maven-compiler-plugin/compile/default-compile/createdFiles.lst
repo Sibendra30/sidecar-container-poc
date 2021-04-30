@@ -1,5 +1,8 @@
-com/wp/tokenproducer/TokenproducerApplication.class
-com/wp/tokenproducer/config/ReadinessEndpoint.class
-com/wp/tokenproducer/config/CustomHealthIndicator.class
-com/wp/tokenproducer/controller/TokenController.class
-com/wp/tokenproducer/config/TokenWatchConfiguration.class
+com/wp/TokenSchedularMainApp.class
+com/wp/producer/controller/ProducerController.class
+com/wp/TokenproducerApplication.class
+com/wp/consumer/config/ReadinessEndpoint.class
+com/wp/consumer/config/TokenWatchConfiguration.class
+com/wp/consumer/controller/TokenController.class
+com/wp/consumer/config/CustomHealthIndicator.class
+com/wp/producer/config/TokenSchedulerConfig.class
